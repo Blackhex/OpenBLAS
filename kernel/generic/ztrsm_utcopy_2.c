@@ -63,17 +63,14 @@ int CNAME(BLASLONG m, BLASLONG n, FLOAT *a, BLASLONG lda, BLASLONG offset, FLOAT
     while (i > 0) {
 
       if (ii == jj) {
-#ifndef UNIT
 	data01 = *(a1 + 0);
 	data02 = *(a1 + 1);
-#endif
 
 	data05 = *(a2 + 0);
 	data06 = *(a2 + 1);
-#ifndef UNIT
+
 	data07 = *(a2 + 2);
 	data08 = *(a2 + 3);
-#endif
 
 	compinv(b + 0, data01, data02);
 	*(b +  4) = data05;
@@ -112,10 +109,9 @@ int CNAME(BLASLONG m, BLASLONG n, FLOAT *a, BLASLONG lda, BLASLONG offset, FLOAT
     if ((m & 1) != 0) {
 
       if (ii== jj) {
-#ifndef UNIT
 	data01 = *(a1 + 0);
 	data02 = *(a1 + 1);
-#endif
+
 	compinv(b, data01, data02);
       }
 
@@ -146,10 +142,9 @@ int CNAME(BLASLONG m, BLASLONG n, FLOAT *a, BLASLONG lda, BLASLONG offset, FLOAT
     while (i > 0) {
 
       if (ii == jj) {
-#ifndef UNIT
 	data01 = *(a1 + 0);
 	data02 = *(a1 + 1);
-#endif
+
 	compinv(b, data01, data02);
       }
 
