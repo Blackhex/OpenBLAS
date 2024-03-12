@@ -3,6 +3,7 @@
 ##
 
 cmake_minimum_required(VERSION 2.8.5)
+#cmake_policy(SET CMP0054 OLD)
 
 project(OpenBLAS C ASM)
 
